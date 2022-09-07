@@ -182,8 +182,6 @@ body {
 }
 
 .nav {
-    /* border: 1px solid red; */
-    /* position: fixed; */
     padding-top: 2.5rem;
     padding-left: 8.75rem;
     display: flex;
@@ -225,6 +223,8 @@ body {
     position: relative;
     z-index: 999;
     background-color: #ff6912;
+    color: black;
+    font-size: 1.25rem;
     width: 10.5em;
     height: 3.125em;
     display: flex;
@@ -237,17 +237,13 @@ body {
 }
 
 .container-sign-up:hover {
-    /* background-color: #8338ec; */
     transform: scale(1.1);
-}
-
-.container-sign-up a {
-    color: black;
-    transition: color 0.3s ease-in-out 0.01s;
 }
 
 .container-log-in {
     border: 2px solid #03ff68;
+    color: white;
+    font-size: 1.25rem;
     width: 10.5em;
     height: 3.125em;
     display: flex;
@@ -260,11 +256,6 @@ body {
 
 .container-log-in:hover {
     transform: scale(1.1);
-}
-
-.container-log-in a {
-    color: white;
-    font-size: 1.25rem;
 }
 
 .img-container {
