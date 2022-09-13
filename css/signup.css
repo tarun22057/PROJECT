@@ -1,0 +1,159 @@
+*{
+  margin:0;
+  padding:0;
+  color: white;
+}
+body{
+  background-image: url(/background-img.png);
+  background-size: cover;
+  width: 100%;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav-logo {
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.6875rem;
+}
+
+.nav-logo span {
+  color: #ff6912;
+}
+
+.nav-links {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+.nav-links a:hover{
+  text-decoration: line-through;
+}
+
+.nav-sign-up {
+  background-color: #f35b04;
+  opacity: 60%;
+  height: 2.124rem;
+  width: 5.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  transition: all ease-in 0.3s;
+}
+
+.nav {
+  padding-top: 2.5rem;
+  padding-left: 8.75rem;
+  display: flex;
+  gap: 45.75rem;
+}
+.nav-sign-up:hover{
+  opacity: 100%;
+  transform: scale(1.1);
+}
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+form {
+  margin-top: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+input{
+  font-family: "Nunito Sans", sans-serif;
+}
+.foot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  gap: 2rem;
+}
+.hero-title{
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+.hero-title span{
+  color: #ff6912;
+}
+.username{
+  background: rgb(229, 227, 227);
+  padding: 0.7rem;
+  width: 250%;
+  border-radius: 15px ;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 0;
+  color: black;
+}
+::placeholder{
+  color: black;
+  font-weight: 700;
+}
+.nav-sign-up-log {
+  font-family: "Montserrat Alternates", sans-serif ;
+  background-color: rgb(7, 235, 7);
+  opacity: 60%;
+  height: 2.124rem;
+  width: 5.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  transition: all ease-in 0.7s;
+}
+.nav-sign-up-log:hover{
+  opacity: 100%;
+  transform: scale(1.2);
+}
+.forgot-pass{
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.875rem;
+  color: rgba(33, 230, 158, 0.6);
+  transition: all ease 0.3s;
+}
+.forgot-pass:hover{
+  color: rgb(33,230,158);
+}
+.foot{
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.875rem;
+  color: rgba(33, 230, 158, 0.6);
+  transition: all ease 0.3s;
+  font-weight: 800;
+}
+.nav-sign-up{
+  color: #ff6912d2;
+  transition: all ease 0.3s;
+  font-family: "Montserrat Alternates", sans-serif ;
+}
+sign-up:hover{
+  color: #ff6912;
+}
+.log-in{
+  color: rgb(7, 235, 7) ;
+  transition: all ease 0.3s;
+  font-family: "Nunito Sans", sans-serif;
+}
+.log-in:hover{
+  scale: 1.2;;
+}

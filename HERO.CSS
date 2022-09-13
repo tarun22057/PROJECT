@@ -209,7 +209,8 @@ body {
 }
 
 .container {
-    margin-top: 15.375rem;
+    width: 90%;
+    margin-top: 3.375rem;
 }
 
 .buttons {
@@ -268,7 +269,6 @@ body {
 .image {
     max-width: 100%;
 }
-
 .curve {
     position: absolute;
     z-index: 0;
@@ -279,4 +279,10 @@ body {
     opacity: 15%;
     height: 31.17rem;
     width: 38.5em;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+    align-items: center;
 }
