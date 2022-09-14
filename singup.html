@@ -21,27 +21,82 @@
 </head>
 <body>  
   <nav class="nav">
-    <div class="nav-logo"><a href="./HERO.HTML"><span>G.</span>SPOT</a></div>
+    <div class="nav-logo"><a href="#"><span>G.</span>SPOT</a></div>
     <div class="nav-links">
         <a href="place-holder/">Services</a>
         <a href="place-holder/">About Us</a>
         <a href="place-holder/">Help</a>
-        <div class="nav-sign-up-log"><a href="#">Log In</a></div>
+        <div class="nav-sign-up-log"><a href="./login.html">Log In</a></div>
     </div>
 </nav>
 <div class="hero">
   <h1 class="hero-title">Sign up and start taking it easy</h1>
   <form>
-    <input class="username" type="text" placeholder="Full NAME">
-    <input class="username" type="email" placeholder="Email" required>
-    <input class="username" type="password" placeholder="Password" required>
-    <input class="username" type="text" placeholder="Confirm Password" required>
-    <div class="nav-sign-up"><a href="./HERO.HTML">Sign Up</a></div>
+    <input class="username fName" type="text"  placeholder="Full NAME">
+    <input class="username email" type="email"  placeholder="Email" required>
+    <input class="username password" type="password"  placeholder="Password" required>
+    <input class="username confirmpassword" type="text"  placeholder="Confirm Password" required>
+    <div class="nav-sign-up signup"><a href="#">Sign Up</a></div>
   </form>
   <div class="foot">
   <p>By signing up, you agree to our terms of Use and Privacy policy</p>
-  <h3>Already have a Account ? <a class="log-in" href="#">Log In</a></h3>
+  <h3>Already have a Account ? <a class="log-in" href="./login.html">Log In</a></h3>
 </div>
 </div>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDSyNWkSGhPLQ5IrKumlBpW3hdV0eG3hn4",
+    authDomain: "auth-53b1a.firebaseapp.com",
+    databaseURL: "https://auth-53b1a-default-rtdb.firebaseio.com",
+    projectId: "auth-53b1a",
+    storageBucket: "auth-53b1a.appspot.com",
+    messagingSenderId: "447731907538",
+    appId: "1:447731907538:web:3807eed6a8b1880d77260b"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+  const signup = document.querySelector('.signup');
+  signup.addEventListener('click', (e) => {
+    var email = document.querySelector('.email').value;
+    var password = document.querySelector('.password').value;
+    var displayName = document.querySelector('.fName').value;
+    var confirmpass = document.querySelector('.confirmpassword').value;
+    if(password == confirmpass){
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    set(ref(database, 'users/' + user.uid), {
+      email: email,
+      displayName: displayName
+    });
+    alert("user created!");
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+    // ..
+  });
+    }
+    else{
+      alert("passwords do not match");
+    } 
+  })
+ 
+</script>
 </body>
 </html>
